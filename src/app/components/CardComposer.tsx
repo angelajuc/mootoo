@@ -45,10 +45,10 @@ export default function CardComposer(props: {
             ctx.fillRect(70, 80, W - 140, 90);
 
             ctx.fillStyle = "#111";
-            ctx.font = "bold 44px system-ui, -apple-system, Segoe UI, Roboto, Arial";
+            ctx.font = "bold 44px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.fillText(name, 90, 140);
 
-            ctx.font = "24px system-ui, -apple-system, Segoe UI, Roboto, Arial";
+            ctx.font = "24px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.fillStyle = "#444";
             ctx.fillText(subtitle, 90, 170);
 
@@ -61,14 +61,14 @@ export default function CardComposer(props: {
             ctx.fillRect(70, 760, W - 140, 220);
 
             ctx.fillStyle = "#111";
-            ctx.font = "28px system-ui, -apple-system, Segoe UI, Roboto, Arial";
-            ctx.fillText("Ability: Doodle Power", 90, 820);
+            ctx.font = "28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            ctx.fillText("Ability: Poop", 90, 820);
 
-            ctx.font = "24px system-ui, -apple-system, Segoe UI, Roboto, Arial";
+            ctx.font = "24px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.fillStyle = "#333";
             wrapText(ctx, "A mysterious being born from pure scribbles. Rumored to evolve when someone says “nice drawing.”", 90, 870, W - 180, 32);
         } else {
-            // business card layout (portrait)
+            // business card layout
             ctx.fillStyle = "#0b1220";
             ctx.fillRect(0, 0, W, H);
 

@@ -126,10 +126,12 @@ export default function DrawingCanvas(props: {
                     style={{
                         touchAction: "none",
                         display: "block",
+                        borderRadius: 10,
+                        border: "3px solid #e4a0f7",
                         width: size,
                         height: size,
-                        background:
-                            "linear-gradient(45deg, #f7f7f7 25%, transparent 25%) -10px 0/20px 20px, linear-gradient(-45deg, #f7f7f7 25%, transparent 25%) -10px 0/20px 20px, linear-gradient(45deg, transparent 75%, #f7f7f7 75%) -10px 0/20px 20px, linear-gradient(-45deg, transparent 75%, #f7f7f7 75%) -10px 0/20px 20px",
+                        background: "white",
+                            //"linear-gradient(45deg, #f7f7f7 25%, transparent 25%) -10px 0/20px 20px, linear-gradient(-45deg, #f7f7f7 25%, transparent 25%) -10px 0/20px 20px, linear-gradient(45deg, transparent 75%, #f7f7f7 75%) -10px 0/20px 20px, linear-gradient(-45deg, transparent 75%, #f7f7f7 75%) -10px 0/20px 20px",
                     }}
                     aria-label="Drawing canvas"
                 />
@@ -149,8 +151,8 @@ export default function DrawingCanvas(props: {
 const btn: React.CSSProperties = {
     padding: "10px 12px",
     borderRadius: 10,
-    border: "1px solid #ddd",
-    background: "white",
+    border: "3px solid #e4a0f7",
+    background: "darkorange",
     cursor: "pointer",
     color: "black"
 };

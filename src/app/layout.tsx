@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {Bungee_Outline, IBM_Plex_Mono} from "next/font/google";
+import {Bungee_Outline, IBM_Plex_Mono, Geist_Mono} from "next/font/google";
 import "./globals.css";
 
 const bodyFont = IBM_Plex_Mono ({

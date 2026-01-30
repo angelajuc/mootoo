@@ -65,7 +65,6 @@ const label: React.CSSProperties = {
     display: "grid",
     gap: 6,
     fontSize: 14,
-    color: "#FFF",
 };
 
 const innerLabel: React.CSSProperties = {
