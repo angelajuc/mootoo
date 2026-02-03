@@ -8,6 +8,8 @@ export default function CardComposer(props: {
     drawingPngDataUrl: string | null;
     name?: string;
     subtitle?: string;
+    email? : string;
+    phone?: string;
     style?: CardStyle;
 }) {
     const { drawingPngDataUrl, name = "Sketchymon", subtitle = "Doodle creature", style = "sketchymon" } = props;
