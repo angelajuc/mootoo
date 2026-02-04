@@ -8,11 +8,13 @@ export default function CardComposer(props: {
     drawingPngDataUrl: string | null;
     name?: string;
     subtitle?: string;
+    ability? : string;
+    description? : string;
     email? : string;
     phone?: string;
     style?: CardStyle;
 }) {
-    const { drawingPngDataUrl, name = "Sketchymon", subtitle = "Doodle creature", style = "sketchymon" } = props;
+    const { drawingPngDataUrl, name = "Sketchymon", subtitle = "Doodle creature", style = "sketchymon", ability = "poop", description = "A mysterious being born from pure scribbles. Rumored to evolve when someone says 'nice drawing'."} = props;
     const outRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
