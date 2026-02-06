@@ -14,7 +14,7 @@ export default function CardComposer(props: {
     phone?: string;
     style?: CardStyle;
 }) {
-    const { drawingPngDataUrl, name = "Sketchymon", subtitle = "Doodle creature", style = "sketchymon", email = "uremail@email.com", phone = "000-000-0000", ability = "poop", description = "A mysterious being born from pure scribbles. Rumored to evolve when someone says 'nice drawing'."} = props;
+    const { drawingPngDataUrl, name = "Sketchymon", subtitle = "Doodle creature", style = "sketchymon", email = "uremail@email.com", phone = "000-000-0000", ability = "Poop", description = "A mysterious being born from pure scribbles. Rumored to evolve when someone says 'nice drawing'."} = props;
     const outRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
@@ -66,11 +66,11 @@ export default function CardComposer(props: {
 
             ctx.fillStyle = "#111";
             ctx.font = "28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
-            ctx.fillText("Ability: Poop", 90, 820);
+            ctx.fillText(`Ability: ${ability}`, 90, 820);
 
             ctx.font = "24px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.fillStyle = "#333";
-            wrapText(ctx, "A mysterious being born from pure scribbles. Rumored to evolve when someone says “nice drawing.”", 90, 870, W - 180, 32);
+            wrapText(ctx, `${description}`, 90, 870, W - 180, 32);
         } else {
             // business card layout
             ctx.fillStyle = "#0b1220";

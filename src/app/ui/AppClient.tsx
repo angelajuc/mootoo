@@ -55,7 +55,7 @@ export default function AppClient() {
 
             <div style={{ display: "grid", gap: 12 }}>
                 <h2 style={{ fontSize: 18, fontWeight: 700 }}>Preview</h2>
-                <CardComposer drawingPngDataUrl={png} name={name} subtitle={subtitle} style={style} />
+                <CardComposer drawingPngDataUrl={png} name={name} subtitle={subtitle} email={email} phone={phone} ability={ability} description={description} style={style} />
             </div>
         </div>
     );
