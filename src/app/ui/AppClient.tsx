@@ -49,7 +49,7 @@ export default function AppClient() {
                         <select style={input} value={style} onChange={(e) => setStyle(e.target.value as any)}>
                             <option value="sketchymon">Sketchymon</option>
                             <option value="business">Business</option>
-                            
+
                         </select>
                     </label>
 
@@ -67,6 +67,22 @@ export default function AppClient() {
 
                      <label style ={innerLabel}>
                         <input style={input} value={description} onChange={(e) => setDescription(e.target.value)} />
+                     </label>
+
+                     <label style={label}>
+                        Email
+                     </label>
+
+                     <label style={innerLabel}>
+                        <input style={input} value={email} onChange={(e) => setEmail(e.target.value)} />
+                     </label>
+
+                     <label style={label}>
+                        Phone
+                     </label>
+
+                     <label style ={innerLabel}>
+                        <input style={input} value={phone} onChange={(e) => setPhone(e.target.value)} />
                      </label>
                 </div>
 

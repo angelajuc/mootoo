@@ -117,7 +117,7 @@ export default function CardComposer(props: {
             };
             img.src = drawingPngDataUrl;
         }
-    }, [drawingPngDataUrl, name, subtitle, style]);
+    }, [drawingPngDataUrl, name, subtitle, style, email, phone, ability, description]);
 
     const download = () => {
         const canvas = outRef.current;
