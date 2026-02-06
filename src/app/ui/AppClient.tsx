@@ -75,6 +75,28 @@ export default function AppClient() {
                         </>
                     )}
 
+                    {style === "business" && (
+                        <>
+                            <label style={label}>Email</label>
+                            <label style={innerLabel}>
+                                <input
+                                    style={input}
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </label>
+
+                            <label style={label}>Phone</label>
+                            <label style={innerLabel}>
+                                <input
+                                    style={input}
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                />
+                            </label>
+                        </>
+                    )}
+
                 </div>
 
                 <DrawingCanvas onChangePng={setPng} />
