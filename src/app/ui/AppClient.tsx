@@ -53,39 +53,28 @@ export default function AppClient() {
                         </select>
                     </label>
 
-                    
+                    {style === "sketchymon" && (
+                        <>
+                            <label style={label}>Ability</label>
+                            <label style={innerLabel}>
+                                <input
+                                    style={input}
+                                    value={ability}
+                                    onChange={(e) => setAbility(e.target.value)}
+                                />
+                            </label>
 
-                    <label style={label}>
-                        Ability
-                    </label>
+                            <label style={label}>Description</label>
+                            <label style={innerLabel}>
+                                <input
+                                    style={input}
+                                    value={description}
+                                    onChange={(e) => setDescription(e.target.value)}
+                                />
+                            </label>
+                        </>
+                    )}
 
-                     <label style={innerLabel}>
-                        <input style={input} value={ability} onChange={(e) => setAbility(e.target.value)} />
-                     </label>
-
-                     <label style={label}>
-                        Description
-                     </label>
-
-                     <label style ={innerLabel}>
-                        <input style={input} value={description} onChange={(e) => setDescription(e.target.value)} />
-                     </label>
-
-                     <label style={label}>
-                        Email
-                     </label>
-
-                     <label style={innerLabel}>
-                        <input style={input} value={email} onChange={(e) => setEmail(e.target.value)} />
-                     </label>
-
-                     <label style={label}>
-                        Phone
-                     </label>
-
-                     <label style ={innerLabel}>
-                        <input style={input} value={phone} onChange={(e) => setPhone(e.target.value)} />
-                     </label>
                 </div>
 
                 <DrawingCanvas onChangePng={setPng} />
