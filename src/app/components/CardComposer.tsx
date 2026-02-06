@@ -14,7 +14,7 @@ export default function CardComposer(props: {
     phone?: string;
     style?: CardStyle;
 }) {
-    const { drawingPngDataUrl, name = "Sketchymon", subtitle = "Doodle creature", style = "sketchymon", email = "uremail@gmail.com", phone = "000-000-0000", ability = "poop", description = "A mysterious being born from pure scribbles. Rumored to evolve when someone says 'nice drawing'."} = props;
+    const { drawingPngDataUrl, name = "Sketchymon", subtitle = "Doodle creature", style = "sketchymon", email = "uremail@email.com", phone = "000-000-0000", ability = "poop", description = "A mysterious being born from pure scribbles. Rumored to evolve when someone says 'nice drawing'."} = props;
     const outRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
@@ -92,8 +92,8 @@ export default function CardComposer(props: {
 
             ctx.fillStyle = "#111";
             ctx.font = "28px system-ui, -apple-system, Segoe UI, Roboto, Arial";
-            ctx.fillText("email: hello@example.com", 90, 880);
-            ctx.fillText("site: yourdomain.com", 90, 930);
+            ctx.fillText(`email: ${email}`, 90, 880);
+            ctx.fillText(`phone: ${phone}`, 90, 930);
         }
 
         // draw the user sketch into the art box
