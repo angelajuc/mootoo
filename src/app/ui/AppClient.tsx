@@ -9,6 +9,10 @@ export default function AppClient() {
     const [style, setStyle] = useState<"sketchymon" | "business">("sketchymon");
     const [name, setName] = useState("Sketchymon");
     const [subtitle, setSubtitle] = useState("Doodle creature");
+    const [email, setEmail] = useState("uremail@email.com");
+    const [phone, setPhone] = useState("000-000-0000");
+    const [ability, setAbility] = useState("Poop");
+    const [description, setDescription] = useState("A mysterious being born from pure scribbles. Rumored to evolve when someone says 'nice drawing'.");
 
     return (
         <div
@@ -45,8 +49,25 @@ export default function AppClient() {
                         <select style={input} value={style} onChange={(e) => setStyle(e.target.value as any)}>
                             <option value="sketchymon">Sketchymon</option>
                             <option value="business">Business</option>
+                            
                         </select>
                     </label>
+
+                    <label style={label}>
+                        Ability
+                    </label>
+
+                     <label style={innerLabel}>
+                        <input style={input} value={ability} onChange={(e) => setAbility(e.target.value)} />
+                     </label>
+
+                     <label style={label}>
+                        Description
+                     </label>
+
+                     <label style ={innerLabel}>
+                        <input style={input} value={description} onChange={(e) => setDescription(e.target.value)} />
+                     </label>
                 </div>
 
                 <DrawingCanvas onChangePng={setPng} />
