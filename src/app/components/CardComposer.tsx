@@ -10,11 +10,12 @@ export default function CardComposer(props: {
     subtitle?: string;
     ability? : string;
     description? : string;
+    health? : string;
     email? : string;
     phone?: string;
     style?: CardStyle;
 }) {
-    const { drawingPngDataUrl, name = "Sketchymon", subtitle = "Doodle creature", style = "sketchymon", email = "uremail@email.com", phone = "000-000-0000", ability = "Poop", description = "A mysterious being born from pure scribbles. Rumored to evolve when someone says 'nice drawing'."} = props;
+    const { drawingPngDataUrl, name = "Sketchymon", subtitle = "Doodle creature", health = "75", style = "sketchymon", email = "uremail@email.com", phone = "000-000-0000", ability = "Poop", description = "A mysterious being born from pure scribbles. Rumored to evolve when someone says 'nice drawing'."} = props;
     const outRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
@@ -68,6 +69,11 @@ export default function CardComposer(props: {
             ctx.font = "28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.fillText(`Ability: ${ability}`, 90, 820);
 
+            //HP added
+            ctx.fillStyle = "#111";
+            ctx.font = "28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            ctx.fillText(`HP: ${health}`, 520, 820);
+
             ctx.font = "24px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.fillStyle = "#333";
             wrapText(ctx, `${description}`, 90, 870, W - 180, 32);
@@ -117,7 +123,7 @@ export default function CardComposer(props: {
             };
             img.src = drawingPngDataUrl;
         }
-    }, [drawingPngDataUrl, name, subtitle, style, email, phone, ability, description]);
+    }, [drawingPngDataUrl, name, subtitle, style, email, phone, ability, description, health]);
 
     const download = () => {
         const canvas = outRef.current;
