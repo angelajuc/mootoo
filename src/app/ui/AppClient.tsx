@@ -13,6 +13,7 @@ export default function AppClient() {
     const [phone, setPhone] = useState("000-000-0000");
     const [ability, setAbility] = useState("Poop");
     const [description, setDescription] = useState("A mysterious being born from pure scribbles. Rumored to evolve when someone says 'nice drawing'.");
+    const [health, setHealth] = useState("150");
 
     return (
         <div
