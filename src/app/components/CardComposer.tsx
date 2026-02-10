@@ -66,15 +66,15 @@ export default function CardComposer(props: {
             ctx.fillRect(70, 760, W - 140, 220);
 
             ctx.fillStyle = "#111";
-            ctx.font = "28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            ctx.font = "bold 28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.fillText(`Ability: ${ability}`, 90, 820);
 
             //HP added
             ctx.fillStyle = "#111";
-            ctx.font = "28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            ctx.font = "bold 28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.fillText(`HP: ${health}`, 520, 820);
 
-            ctx.font = "24px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            ctx.font = "26px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.fillStyle = "#333";
             wrapText(ctx, `${description}`, 90, 870, W - 180, 32);
         } else {
