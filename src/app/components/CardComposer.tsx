@@ -50,10 +50,12 @@ export default function CardComposer(props: {
             ctx.fillRect(70, 80, W - 140, 90);
 
             ctx.fillStyle = "#111";
-            ctx.font = "bold 44px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            //ctx.font = "bold 44px system-ui, -apple-system, 'Trebuchet MS', 'Gill Sans', 'Segoe UI', sans-serif";
+            ctx.font = "bold 44px 'Trebuchet MS', sans-serif";
             ctx.fillText(name, 90, 140);
 
-            ctx.font = "24px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            //ctx.font = "24px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            ctx.font = "bold 24px 'Trebuchet MS', sans-serif";
             ctx.fillStyle = "#444";
             ctx.fillText(subtitle, 90, 170);
 
@@ -66,7 +68,8 @@ export default function CardComposer(props: {
             ctx.fillRect(70, 760, W - 140, 220);
 
             ctx.fillStyle = "#111";
-            ctx.font = "bold 28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            //ctx.font = "bold 28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            ctx.font = "bold 28px 'Trebuchet MS', sans-serif";
             ctx.fillText(`Ability: ${ability}`, 90, 820);
 
             //HP added
