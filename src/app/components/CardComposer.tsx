@@ -185,7 +185,7 @@ function wrapText(
 const btn: React.CSSProperties = {
     padding: "10px 12px",
     borderRadius: 10,
-    border: "1px solid #ddd",
+    border: "4px solid #e4a0f7",
     background: "white",
     cursor: "pointer",
     color: "black",
