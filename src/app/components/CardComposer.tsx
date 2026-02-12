@@ -52,12 +52,18 @@ export default function CardComposer(props: {
             ctx.fillStyle = "#111";
             //ctx.font = "bold 44px system-ui, -apple-system, 'Trebuchet MS', 'Gill Sans', 'Segoe UI', sans-serif";
             ctx.font = "bold 44px 'Trebuchet MS', sans-serif";
-            ctx.fillText(name, 90, 140);
+            ctx.fillText(name, 90, 135);
+
+            //HP added
+            ctx.fillStyle = "#111";
+            //ctx.font = "bold 28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
+            ctx.font = "bold 35px 'Trebuchet MS', sans-serif";
+            ctx.fillText(`HP ${health}`, 540, 140);
 
             //ctx.font = "24px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.font = "bold 24px 'Trebuchet MS', sans-serif";
             ctx.fillStyle = "#444";
-            ctx.fillText(subtitle, 90, 170);
+            ctx.fillText(subtitle, 90, 165);
 
             // art box
             ctx.fillStyle = "#eaeaea";
@@ -71,12 +77,6 @@ export default function CardComposer(props: {
             //ctx.font = "bold 28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.font = "bold 35px 'Trebuchet MS', sans-serif";
             ctx.fillText(`Ability: ${ability}`, 90, 820);
-
-            //HP added
-            ctx.fillStyle = "#111";
-            //ctx.font = "bold 28px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
-            ctx.font = "bold 35px 'Trebuchet MS', sans-serif";
-            ctx.fillText(`HP: ${health}`, 520, 820);
 
             //ctx.font = "26px system-ui, -apple-system, 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif";
             ctx.font = "28px 'Trebuchet MS', sans-serif";
