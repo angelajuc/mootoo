@@ -111,13 +111,13 @@ export default function DrawingCanvas(props: {
     };
 
     return (
-        <div style={{ display: "grid", gap: 12 }}>
+        <div style={{ display: "grid", gap: 12}}>
             <div
                 style={{
-                    border: "1px solid #ddd",
+                    border: "5px solid #f2c94c", // alt: #FFF4B5 og: #ddd
                     borderRadius: 12,
                     padding: 12,
-                    background: "white",
+                    background: "#FFF8CC",
                     width: size + 24,
                 }}
             >
@@ -127,8 +127,8 @@ export default function DrawingCanvas(props: {
                         touchAction: "none",
                         display: "block",
                         borderRadius: 10,
-                        border: "5px solid #f2c94c", // #e4a0f7
-                        width: size,
+                        border: "0px solid #f2c94c", // #e4a0f7
+                        width: size - 10,
                         height: size,
                         background: "white",
                             //"linear-gradient(45deg, #f7f7f7 25%, transparent 25%) -10px 0/20px 20px, linear-gradient(-45deg, #f7f7f7 25%, transparent 25%) -10px 0/20px 20px, linear-gradient(45deg, transparent 75%, #f7f7f7 75%) -10px 0/20px 20px, linear-gradient(-45deg, transparent 75%, #f7f7f7 75%) -10px 0/20px 20px",
@@ -152,7 +152,7 @@ const btn: React.CSSProperties = {
     padding: "10px 12px",
     borderRadius: 10,
     border: "3px solid #f2c94c", // #e4a0f7
-    background: "white",
+    background: "#FFF8CC", //#FFF4B5
     cursor: "pointer",
     color: "black"
 };
