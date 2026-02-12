@@ -152,7 +152,7 @@ const btn: React.CSSProperties = {
     padding: "10px 12px",
     borderRadius: 10,
     border: "3px solid #e4a0f7",
-    background: "darkorange",
+    background: "white",
     cursor: "pointer",
     color: "black"
 };
