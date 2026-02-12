@@ -91,20 +91,20 @@ export default function CardComposer(props: {
             ctx.fillRect(50, 60, W - 100, H - 120);
 
             ctx.fillStyle = "#111";
-            ctx.font = "bold 52px system-ui, -apple-system, Segoe UI, Roboto, Arial";
+            ctx.font = "bold 52px 'Times New Roman', Roboto, Arial";
             ctx.fillText(name, 90, 160);
 
-            ctx.fillStyle = "#444";
-            ctx.font = "30px system-ui, -apple-system, Segoe UI, Roboto, Arial";
+            ctx.fillStyle = "#555";
+            ctx.font = "bold 30px 'Times New Roman'";
             ctx.fillText(subtitle, 90, 210);
 
             ctx.fillStyle = "#f4f4f4";
             ctx.fillRect(90, 270, W - 180, 520);
 
             ctx.fillStyle = "#111";
-            ctx.font = "28px system-ui, -apple-system, Segoe UI, Roboto, Arial";
-            ctx.fillText(`email: ${email}`, 90, 880);
-            ctx.fillText(`phone: ${phone}`, 90, 930);
+            ctx.font = "28px 'Times New Roman'";
+            ctx.fillText(`Email: ${email}`, 90, 880);
+            ctx.fillText(`Phone: ${phone}`, 90, 930);
         }
 
         // draw the user sketch into the art box
