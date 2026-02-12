@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 
-type CardStyle = "sketchymon" | "business";
+type CardStyle = "mootoo" | "business";
 
 export default function CardComposer(props: {
     drawingPngDataUrl: string | null;
@@ -15,7 +15,7 @@ export default function CardComposer(props: {
     phone?: string;
     style?: CardStyle;
 }) {
-    const { drawingPngDataUrl, name = "Sketchymon", subtitle = "Doodle creature", health = "75", style = "sketchymon", email = "uremail@email.com", phone = "000-000-0000", ability = "Poop", description = "A mysterious being born from pure scribbles. Rumored to evolve when someone says 'nice drawing'."} = props;
+    const { drawingPngDataUrl, name = "MooTOO!", subtitle = "Doodly cow", health = "75", style = "mootoo", email = "example-email@email.com", phone = "000-000-0000", ability = "Eating grass", description = "A good friend. Professional lawn mower and field clearer."} = props;
     const outRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
@@ -34,7 +34,7 @@ export default function CardComposer(props: {
         // background
         ctx.clearRect(0, 0, W, H);
 
-        if (style === "sketchymon") {
+        if (style === "mootoo") {
             // outer frame
             ctx.fillStyle = "#f2c94c";
             ctx.fillRect(0, 0, W, H);

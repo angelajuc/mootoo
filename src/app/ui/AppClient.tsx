@@ -6,13 +6,13 @@ import CardComposer from "../components/CardComposer";
 
 export default function AppClient() {
     const [png, setPng] = useState<string | null>(null);
-    const [style, setStyle] = useState<"sketchymon" | "business">("sketchymon");
-    const [name, setName] = useState("Sketchymon");
-    const [subtitle, setSubtitle] = useState("Doodle creature");
-    const [email, setEmail] = useState("uremail@email.com");
+    const [style, setStyle] = useState<"mootoo" | "business">("mootoo");
+    const [name, setName] = useState("MooTOO!");
+    const [subtitle, setSubtitle] = useState("Doodly cow");
+    const [email, setEmail] = useState("example-email@email.com");
     const [phone, setPhone] = useState("000-000-0000");
-    const [ability, setAbility] = useState("Poop");
-    const [description, setDescription] = useState("Doodly and friendly creature born from your imagination.");
+    const [ability, setAbility] = useState("Eating Grass");
+    const [description, setDescription] = useState("A good friend. Professional lawn mower and field clearer.");
     const [health, setHealth] = useState("150");
 
     return (
@@ -48,13 +48,13 @@ export default function AppClient() {
 
                     <label style={innerLabel}>
                         <select style={input} value={style} onChange={(e) => setStyle(e.target.value as any)}>
-                            <option value="sketchymon">Sketchymon</option>
+                            <option value="mootoo">MooTOO!</option>
                             <option value="business">Business</option>
 
                         </select>
                     </label>
 
-                    {style === "sketchymon" && (
+                    {style === "mootoo" && (
                         <>
                             <label style={label}>Ability</label>
                             <label style={innerLabel}>

@@ -118,7 +118,7 @@ export default function DrawingCanvas(props: {
                     borderRadius: 12,
                     padding: 12,
                     background: "#FFF8CC",
-                    width: size + 24,
+                    width: size + 34,
                 }}
             >
                 <canvas
@@ -128,7 +128,7 @@ export default function DrawingCanvas(props: {
                         display: "block",
                         borderRadius: 10,
                         border: "0px solid #f2c94c", // #e4a0f7
-                        width: size - 10,
+                        width: size,
                         height: size,
                         background: "white",
                             //"linear-gradient(45deg, #f7f7f7 25%, transparent 25%) -10px 0/20px 20px, linear-gradient(-45deg, #f7f7f7 25%, transparent 25%) -10px 0/20px 20px, linear-gradient(45deg, transparent 75%, #f7f7f7 75%) -10px 0/20px 20px, linear-gradient(-45deg, transparent 75%, #f7f7f7 75%) -10px 0/20px 20px",
