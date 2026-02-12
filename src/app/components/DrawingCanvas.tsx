@@ -127,7 +127,7 @@ export default function DrawingCanvas(props: {
                         touchAction: "none",
                         display: "block",
                         borderRadius: 10,
-                        border: "3px solid #e4a0f7",
+                        border: "5px solid #f2c94c", // #e4a0f7
                         width: size,
                         height: size,
                         background: "white",
@@ -151,7 +151,7 @@ export default function DrawingCanvas(props: {
 const btn: React.CSSProperties = {
     padding: "10px 12px",
     borderRadius: 10,
-    border: "3px solid #e4a0f7",
+    border: "3px solid #f2c94c", // #e4a0f7
     background: "white",
     cursor: "pointer",
     color: "black"

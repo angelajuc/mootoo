@@ -47,7 +47,7 @@ export default function CardComposer(props: {
 
             // title bar
             ctx.fillStyle = "#f7f7f7";
-            ctx.fillRect(70, 80, W - 140, 90);
+            ctx.fillRect(70, 80, W - 140, 110);
 
             ctx.fillStyle = "#111";
             //ctx.font = "bold 44px system-ui, -apple-system, 'Trebuchet MS', 'Gill Sans', 'Segoe UI', sans-serif";
@@ -185,7 +185,7 @@ function wrapText(
 const btn: React.CSSProperties = {
     padding: "10px 12px",
     borderRadius: 10,
-    border: "4px solid #e4a0f7",
+    border: "4px solid #f2c94c", // #e4a0f7
     background: "white",
     cursor: "pointer",
     color: "black",
