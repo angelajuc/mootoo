@@ -157,12 +157,52 @@ export default function DrawingCanvas(props: {
                 />
             </div>
 
-            <div style={{ display: "flex", gap: 8 }}>
+            {/* Color Palette */}
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, maxWidth: size + 34 }}>
+                {COLORS.map((color) => (
+                    <button
+                        key={color.hex}
+                        title={color.label}
+                        onClick={() => setSelectedColor(color.hex)}
+                        style={{
+                            width: 32,
+                            height: 32,
+                            borderRadius: "50%",
+                            background: color.hex,
+                            border: selectedColor === color.hex
+                                ? "3px solid #111"
+                                : "3px solid transparent",
+                            outline: selectedColor === color.hex
+                                ? "2px solid #f2c94c"
+                                : "2px solid #ddd",
+                            cursor: "pointer",
+                            padding: 0,
+                            transition: "transform 0.1s",
+                            transform: selectedColor === color.hex ? "scale(1.2)" : "scale(1)",
+                        }}
+                    />
+                ))}
+            </div>
+
+            <div style={{ display: "flex", gap: 8, alignItems: "center"}}>
                 <button onClick={clear} style={btn}>
                     <label style={ {color:"555"}}>
                         Clear
                     </label>
                 </button>
+                {/* Current color indicator */}
+                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                  <div style={{
+                    width: 20,
+                    height: 20,
+                    borderRadius: "50%",
+                    background: selectedColor,
+                    border: "2px solid #aaa",
+                    }} />
+                    <span style={{ fontSize: 13, color: "#666" }}>
+                      {COLORS.find(c => c.hex === selectedColor)?.label}
+                    </span>
+                </div>
             </div>
         </div>
     );
