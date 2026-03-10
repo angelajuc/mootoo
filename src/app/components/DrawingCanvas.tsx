@@ -12,6 +12,20 @@ function getCanvasPoint(e: PointerEvent, canvas: HTMLCanvasElement): Point {
     };
 }
 
+
+const COLORS = [
+    { label: "Black",        hex: "#111111" },
+    { label: "Red",          hex: "#e53935" },
+    { label: "Green",        hex: "#43a047" },
+    { label: "Blue",         hex: "#1e88e5" },
+    { label: "Yellow",       hex: "#fdd835" },
+    { label: "Lilac",        hex: "#b39ddb" },
+    { label: "Pink",         hex: "#f48fb1" },
+    { label: "Light Blue",   hex: "#81d4fa" },
+    { label: "Light Orange", hex: "#ffcc80" },
+    { label: "Light Green",  hex: "#a5d6a7" },
+];
+
 export default function DrawingCanvas(props: {
     size?: number;
     strokeWidth?: number;
@@ -22,6 +36,7 @@ export default function DrawingCanvas(props: {
 
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const [isDrawing, setIsDrawing] = useState(false);
+    const [selectedColor, setSelectedColor] = useState(COLORS[0].hex);
 
     const stateRef = useRef({
         last: null as Point | null,
@@ -46,7 +61,7 @@ export default function DrawingCanvas(props: {
         // nice crisp strokes
         ctx.lineCap = "round";
         ctx.lineJoin = "round";
-        ctx.strokeStyle = "#000";
+        ctx.strokeStyle = selectedColor;
         ctx.lineWidth = strokeWidth * dpr;
     }, [size, strokeWidth, dpr]);
 
@@ -65,6 +80,11 @@ export default function DrawingCanvas(props: {
 
         const onPointerDown = (e: PointerEvent) => {
             canvas.setPointerCapture(e.pointerId);
+
+            ctx.strokeStyle = selectedColor;
+            ctx.lineWidth = strokeWidth * dpr;
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
             setIsDrawing(true);
             stateRef.current.last = getCanvasPoint(e, canvas);
         };
